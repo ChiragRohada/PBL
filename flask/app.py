@@ -7,7 +7,8 @@ def hello_world():
 @app.route("/tts",methods = ['POST', 'GET'])
 def hello_world():
 if request.method == 'POST':
-    x=request.form['text']
+        text=request.form['text']
+        gender=request.form['custId']
    
 import pyttsx3
 text_speech = pyttsx3.int()

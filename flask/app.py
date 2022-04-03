@@ -4,14 +4,17 @@ from flask import*
 def hello_world():
    return render_template('index.html') 
 
-@app.route("/tts")
+@app.route("/tts",methods = ['POST', 'GET'])
+def hello_world():
+if request.method == 'POST':
+    x=request.form['text']
+   
 import pyttsx3
 text_speech = pyttsx3.int()
 result = input("text:")
 text_speech.say(result)
 text_speech.runAndWait()
 
-def hello_world():
    return render_template('index.html') 
 
 
